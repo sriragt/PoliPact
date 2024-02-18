@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>United States Governors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="index.html"><div class="title"> 
+    <h1 class="bungee-shade-regular poli">Poli</h1>
+    <h1 class="bungee-shade-regular pact">Pact</h1>
+  </div></a>
+    <h2>State Leaders and Legislators</h2>
+    <div class="state-select-container">
+        <label for="state-select">Select a State:</label>
+        <select id="state-select" onchange="showGovernorInfo()">
+            <option value="default">Choose State</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+        </select>
+    </div>
+    
+    <div id="governor-info"></div>
+    
+    <script>
+        function showGovernorInfo() {
+            var select = document.getElementById("state-select");
+            var selectedState = select.options[select.selectedIndex].value;
+            
+            if (selectedState === "default") {
+                document.getElementById("governor-info").innerHTML = "";
+                return;
+            }
+            
+            var governors = {
+                "Alabama": {
+                    "name": "Kay Ivey",
+                    "party": "Republican",
+                    "age": 79,
+                    "inauguration": "April 10, 2017",
+                    "senators": [
+                    {
+                        "name": "Katie Britt",
+                        "party": "Republican",
+                        "age": 42,
+                        "inauguration": "January 3, 2023"
+                    },
+                    {
+                        "name": "Tommy Tuberville",
+                        "party": "Republican",
+                        "age": 69,
+                        "inauguration": "January 3, 2021"
+                    }
+                    ]
+                },
+                "Alaska": {
+                    "name": "Mike Dunleavy",
+                    "party": "Republican",
+                    "age": 62,
+                    "inauguration": "December 3, 2018",
+                    "senators": [
+                    {
+                        "name": "Lisa Murkowski",
+                        "party": "Republican",
+                        "age": 66,
+                        "inauguration": "December 20, 2002"
+                    },
+                    {
+                        "name": "Dan Sullivan",
+                        "party": "Republican",
+                        "age": 59,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "Arizona": {
+                    "name": "Katie Hobbs",
+                    "party": "Democratic",
+                    "age": 54,
+                    "inauguration": "January 2, 2023",
+                    "senators": [
+                    {
+                        "name": "Kyrsten Sinema",
+                        "party": "Independent",
+                        "age": 47,
+                        "inauguration": "January 3, 2019"
+                    },
+                    {
+                        "name": "Mark Kelly",
+                        "party": "Democratic",
+                        "age": 59,
+                        "inauguration": "December 2, 2020"
+                    }
+                    ]
+                },
+                "Arkansas": {
+                    "name": "Sarah Huckabee Sanders",
+                    "party": "Republican",
+                    "age": 41,
+                    "inauguration": "January 10, 2023",
+                    "senators": [
+                    {
+                        "name": "John Boozman",
+                        "party": "Republican",
+                        "age": 73,
+                        "inauguration": "January 3, 2011"
+                    },
+                    {
+                        "name": "Tom Cotton",
+                        "party": "Republican",
+                        "age": 46,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "California": {
+                    "name": "Gavin Newsom",
+                    "party": "Democratic",
+                    "age": 56,
+                    "inauguration": "January 7, 2019",
+                    "senators": [
+                    {
+                        "name": "Laphonza Butler",
+                        "party": "Democratic",
+                        "age": 44,
+                        "inauguration": "October 3, 2023"
+                    },
+                    {
+                        "name": "Alex Padilla",
+                        "party": "Democratic",
+                        "age": 50,
+                        "inauguration": "January 20, 2021"
+                    }
+                    ]
+                },
+                "Colorado": {
+                    "name": "Jared Polis",
+                    "party": "Democratic",
+                    "age": 48,
+                    "inauguration": "January 8, 2019",
+                    "senators": [
+                    {
+                        "name": "Michael Bennet",
+                        "party": "Democratic",
+                        "age": 59,
+                        "inauguration": "January 21, 2009"
+                    },
+                    {
+                        "name": "John Hickenlooper",
+                        "party": "Democratic",
+                        "age": 71,
+                        "inauguration": "January 3, 2021"
+                    }
+                    ]
+                },
+                "Connecticut": {
+                    "name": "Ned Lamont",
+                    "party": "Democratic",
+                    "age": 70,
+                    "inauguration": "January 9, 2019",
+                    "senators": [
+                    {
+                        "name": "Richard Blumenthal",
+                        "party": "Democratic",
+                        "age": 77,
+                        "inauguration": "January 3, 2011"
+                    },
+                    {
+                        "name": "Chris Murphy",
+                        "party": "Democratic",
+                        "age": 50,
+                        "inauguration": "January 3, 2013"
+                    }
+                    ]
+                },
+                "Delaware": {
+                    "name": "John Carney",
+                    "party": "Democratic",
+                    "age": 67,
+                    "inauguration": "January 17, 2017",
+                    "senators": [
+                    {
+                        "name": "Tom Carper",
+                        "party": "Democratic",
+                        "age": 77,
+                        "inauguration": "January 3, 2001"
+                    },
+                    {
+                        "name": "Chris Coons",
+                        "party": "Democratic",
+                        "age": 60,
+                        "inauguration": "November 15, 2010"
+                    }
+                    ]
+                },
+                "Florida": {
+                    "name": "Ron DeSantis",
+                    "party": "Republican",
+                    "age": 45,
+                    "inauguration": "January 8, 2019",
+                    "senators": [
+                    {
+                        "name": "Marco Rubio",
+                        "party": "Republican",
+                        "age": 52,
+                        "inauguration": "January 3, 2011"
+                    },
+                    {
+                        "name": "Rick Scott",
+                        "party": "Republican",
+                        "age": 71,
+                        "inauguration": "January 8, 2019"
+                    }
+                    ]
+                },
+                "Georgia": {
+                    "name": "Brian Kemp",
+                    "party": "Republican",
+                    "age": 60,
+                    "inauguration": "January 14, 2019",
+                    "senators": [
+                    {
+                        "name": "Raphael Warnock",
+                        "party": "Democratic",
+                        "age": 54,
+                        "inauguration": "January 20, 2021"
+                    },
+                    {
+                        "name": "Jon Ossoff",
+                        "party": "Democratic",
+                        "age": 36,
+                        "inauguration": "January 20, 2021"
+                    }
+                    ]
+                },
+                "Hawaii": {
+                    "name": "Josh Green",
+                    "party": "Democratic",
+                    "age": 53,
+                    "inauguration": "December 5, 2022",
+                    "senators": [
+                    {
+                        "name": "Brian Schatz",
+                        "party": "Democratic",
+                        "age": 51,
+                        "inauguration": "December 26, 2012"
+                    },
+                    {
+                        "name": "Mazie Hirono",
+                        "party": "Democratic",
+                        "age": 76,
+                        "inauguration": "January 3, 2013"
+                    }
+                    ]
+                },
+                "Idaho": {
+                    "name": "Brad Little",
+                    "party": "Republican",
+                    "age": 69,
+                    "inauguration": "January 7, 2019",
+                    "senators": [
+                    {
+                        "name": "Mike Crapo",
+                        "party": "Republican",
+                        "age": 72,
+                        "inauguration": "January 3, 1999"
+                    },
+                    {
+                        "name": "James Risch",
+                        "party": "Republican",
+                        "age": 80,
+                        "inauguration": "January 3, 2009"
+                    }
+                    ]
+                },
+                "Illinois": {
+                    "name": "J. B. Pritzker",
+                    "party": "Democratic",
+                    "age": 59,
+                    "inauguration": "January 14, 2019",
+                    "senators": [
+                    {
+                        "name": "Dick Durbin",
+                        "party": "Democratic",
+                        "age": 79,
+                        "inauguration": "January 3, 1997"
+                    },
+                    {
+                        "name": "Tammy Duckworth",
+                        "party": "Democratic",
+                        "age": 55,
+                        "inauguration": "January 3, 2017"
+                    }
+                    ]
+                },
+                "Indiana": {
+                    "name": "Eric Holcomb",
+                    "party": "Republican",
+                    "age": 55,
+                    "inauguration": "January 9, 2017",
+                    "senators": [
+                    {
+                        "name": "Todd Young",
+                        "party": "Republican",
+                        "age": 51,
+                        "inauguration": "January 3, 2017"
+                    },
+                    {
+                        "name": "Mike Braun",
+                        "party": "Republican",
+                        "age": 69,
+                        "inauguration": "January 3, 2019"
+                    }
+                    ]
+                },
+                "Iowa": {
+                    "name": "Kim Reynolds",
+                    "party": "Republican",
+                    "age": 64,
+                    "inauguration": "May 24, 2017",
+                    "senators": [
+                    {
+                        "name": "Chuck Grassley",
+                        "party": "Republican",
+                        "age": 90,
+                        "inauguration": "January 3, 1981"
+                    },
+                    {
+                        "name": "Joni Ernst",
+                        "party": "Republican",
+                        "age": 53,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "Kansas": {
+                    "name": "Laura Kelly",
+                    "party": "Democratic",
+                    "age": 74,
+                    "inauguration": "January 14, 2019",
+                    "senators": [
+                    {
+                        "name": "Jerry Moran",
+                        "party": "Republican",
+                        "age": 69,
+                        "inauguration": "January 5, 2011"
+                    },
+                    {
+                        "name": "Roger Marshall",
+                        "party": "Republican",
+                        "age": 63,
+                        "inauguration": "January 3, 2021"
+                    }
+                    ]
+                },
+                "Kentucky": {
+                    "name": "Andy Beshear",
+                    "party": "Democratic",
+                    "age": 46,
+                    "inauguration": "December 10, 2019",
+                    "senators": [
+                    {
+                        "name": "Mitch McConnell",
+                        "party": "Republican",
+                        "age": 81,
+                        "inauguration": "January 3, 1985"
+                    },
+                    {
+                        "name": "Rand Paul",
+                        "party": "Republican",
+                        "age": 61,
+                        "inauguration": "January 3, 2011"
+                    }
+                    ]
+                },
+                "Louisiana": {
+                    "name": "Jeff Landry",
+                    "party": "Republican",
+                    "age": 53,
+                    "inauguration": "January 8, 2024",
+                    "senators": [
+                    {
+                        "name": "Bill Cassidy",
+                        "party": "Republican",
+                        "age": 66,
+                        "inauguration": "January 3, 2015"
+                    },
+                    {
+                        "name": "John Kennedy",
+                        "party": "Republican",
+                        "age": 72,
+                        "inauguration": "January 3, 2017"
+                    }
+                    ]
+                },
+                "Maine": {
+                    "name": "Janet Mills",
+                    "party": "Democratic",
+                    "age": 76,
+                    "inauguration": "January 2, 2019",
+                    "senators": [
+                    {
+                        "name": "Susan Collins",
+                        "party": "Republican",
+                        "age": 71,
+                        "inauguration": "January 3, 1997"
+                    },
+                    {
+                        "name": "Angus King",
+                        "party": "Independent",
+                        "age": 79,
+                        "inauguration": "January 3, 2013"
+                    }
+                    ]
+                },
+                "Maryland": {
+                    "name": "Wes Moore",
+                    "party": "Democratic",
+                    "age": 45,
+                    "inauguration": "January 18, 2023",
+                    "senators": [
+                    {
+                        "name": "Ben Cardin",
+                        "party": "Democratic",
+                        "age": 80,
+                        "inauguration": "January 3, 2007"
+                    },
+                    {
+                        "name": "Chris Van Hollen",
+                        "party": "Democratic",
+                        "age": 65,
+                        "inauguration": "January 3, 2017"
+                    }
+                    ]
+                },
+                "Massachusetts": {
+                    "name": "Maura Healey",
+                    "party": "Democratic",
+                    "age": 52,
+                    "inauguration": "January 5, 2023",
+                    "senators": [
+                    {
+                        "name": "Elizabeth Warren",
+                        "party": "Democratic",
+                        "age": 74,
+                        "inauguration": "January 3, 2013"
+                    },
+                    {
+                        "name": "Ed Markey",
+                        "party": "Democratic",
+                        "age": 77,
+                        "inauguration": "July 16, 2013"
+                    }
+                    ]
+                },
+                "Michigan": {
+                    "name": "Gretchen Whitmer",
+                    "party": "Democratic",
+                    "age": 52,
+                    "inauguration": "January 1, 2019",
+                    "senators": [
+                    {
+                        "name": "Debbie Stabenow",
+                        "party": "Democratic",
+                        "age": 73,
+                        "inauguration": "January 3, 2001"
+                    },
+                    {
+                        "name": "Gary Peters",
+                        "party": "Democratic",
+                        "age": 65,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "Minnesota": {
+                    "name": "Tim Walz",
+                    "party": "Democratic–Farmer–Labor",
+                    "age": 59,
+                    "inauguration": "January 7, 2019",
+                    "senators": [
+                    {
+                        "name": "Amy Klobuchar",
+                        "party": "Democratic",
+                        "age": 61,
+                        "inauguration": "January 3, 2007"
+                    },
+                    {
+                        "name": "Tina Smith",
+                        "party": "Democratic",
+                        "age": 65,
+                        "inauguration": "January 3, 2018"
+                    }
+                    ]
+                },
+                "Mississippi": {
+                    "name": "Tate Reeves",
+                    "party": "Republican",
+                    "age": 49,
+                    "inauguration": "January 14, 2020",
+                    "senators": [
+                    {
+                        "name": "Roger Wicker",
+                        "party": "Republican",
+                        "age": 72,
+                        "inauguration": "December 31, 2007"
+                    },
+                    {
+                        "name": "Cindy Hyde-Smith",
+                        "party": "Republican",
+                        "age": 64,
+                        "inauguration": "April 9, 2018"
+                    }
+                    ]
+                },
+                "Missouri": {
+                    "name": "Mike Parson",
+                    "party": "Republican",
+                    "age": 68,
+                    "inauguration": "June 1, 2018",
+                    "senators": [
+                    {
+                        "name": "Eric Schmitt",
+                        "party": "Republican",
+                        "age": 48,
+                        "inauguration": "January 3, 2023"
+                    },
+                    {
+                        "name": "Josh Hawley",
+                        "party": "Republican",
+                        "age": 44,
+                        "inauguration": "January 3, 2019"
+                    }
+                    ]
+                },
+                "Montana": {
+                    "name": "Greg Gianforte",
+                    "party": "Republican",
+                    "age": 62,
+                    "inauguration": "January 4, 2021",
+                    "senators": [
+                    {
+                        "name": "Jon Tester",
+                        "party": "Democratic",
+                        "age": 67,
+                        "inauguration": "January 3, 2007"
+                    },
+                    {
+                        "name": "Steve Daines",
+                        "party": "Republican",
+                        "age": 61,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "Nebraska": {
+                    "name": "Jim Pillen",
+                    "party": "Republican",
+                    "age": 68,
+                    "inauguration": "January 5, 2023",
+                    "senators": [
+                    {
+                        "name": "Deb Fischer",
+                        "party": "Republican",
+                        "age": 72,
+                        "inauguration": "January 3, 2013"
+                    },
+                    {
+                        "name": "Pete Ricketts",
+                        "party": "Republican",
+                        "age": 59,
+                        "inauguration": "January 12, 2023"
+                    }
+                    ]
+                },
+                "Nevada": {
+                    "name": "Joe Lombardo",
+                    "party": "Republican",
+                    "age": 61,
+                    "inauguration": "January 2, 2023",
+                    "senators": [
+                    {
+                        "name": "Catherine Cortez Masto",
+                        "party": "Democratic",
+                        "age": 59,
+                        "inauguration": "January 3, 2017"
+                    },
+                    {
+                        "name": "Jacky Rosen",
+                        "party": "Democratic",
+                        "age": 66,
+                        "inauguration": "January 3, 2019"
+                    }
+                    ]
+                },
+                "New Hampshire": {
+                    "name": "Chris Sununu",
+                    "party": "Republican",
+                    "age": 49,
+                    "inauguration": "January 5, 2017",
+                    "senators": [
+                    {
+                        "name": "Jeanne Shaheen",
+                        "party": "Democratic",
+                        "age": 77,
+                        "inauguration": "January 3, 2009"
+                    },
+                    {
+                        "name": "Maggie Hassan",
+                        "party": "Democratic",
+                        "age": 65,
+                        "inauguration": "January 3, 2017"
+                    }
+                    ]
+                },
+                "New Jersey": {
+                    "name": "Phil Murphy",
+                    "party": "Democratic",
+                    "age": 66,
+                    "inauguration": "January 16, 2018",
+                    "senators": [
+                    {
+                        "name": "Bob Menendez",
+                        "party": "Democratic",
+                        "age": 70,
+                        "inauguration": "January 18, 2006"
+                    },
+                    {
+                        "name": "Cory Booker",
+                        "party": "Democratic",
+                        "age": 54,
+                        "inauguration": "October 31, 2013"
+                    }
+                    ]
+                },
+                "New Mexico": {
+                    "name": "Michelle Lujan Grisham",
+                    "party": "Democratic",
+                    "age": 64,
+                    "inauguration": "January 1, 2019",
+                    "senators": [
+                    {
+                        "name": "Martin Heinrich",
+                        "party": "Democratic",
+                        "age": 52,
+                        "inauguration": "January 3, 2013"
+                    },
+                    {
+                        "name": "Ben Ray Luján",
+                        "party": "Democratic",
+                        "age": 51,
+                        "inauguration": "January 3, 2021"
+                    }
+                    ]
+                },
+                "New York": {
+                    "name": "Kathy Hochul",
+                    "party": "Democratic",
+                    "age": 63,
+                    "inauguration": "August 24, 2021",
+                    "senators": [
+                    {
+                        "name": "Chuck Schumer",
+                        "party": "Democratic",
+                        "age": 73,
+                        "inauguration": "January 3, 1999"
+                    },
+                    {
+                        "name": "Kirsten Gillibrand",
+                        "party": "Democratic",
+                        "age": 57,
+                        "inauguration": "January 26, 2009"
+                    }
+                    ]
+                },
+                "North Carolina": {
+                    "name": "Roy Cooper",
+                    "party": "Democratic",
+                    "age": 64,
+                    "inauguration": "January 1, 2017",
+                    "senators": [
+                    {
+                        "name": "Tedd Budd",
+                        "party": "Republican",
+                        "age": 52,
+                        "inauguration": "January 3, 2023"
+                    },
+                    {
+                        "name": "Thom Tillis",
+                        "party": "Republican",
+                        "age": 63,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "North Dakota": {
+                    "name": "Doug Burgum",
+                    "party": "Republican",
+                    "age": 65,
+                    "inauguration": "December 15, 2016",
+                    "senators": [
+                    {
+                        "name": "John Hoeven",
+                        "party": "Republican",
+                        "age": 66,
+                        "inauguration": "January 3, 2011"
+                    },
+                    {
+                        "name": "Kevin Cramer",
+                        "party": "Republican",
+                        "age": 63,
+                        "inauguration": "January 3, 2019"
+                    }
+                    ]
+                },
+                "Ohio": {
+                    "name": "Mike DeWine",
+                    "party": "Republican",
+                    "age": 75,
+                    "inauguration": "January 14, 2019",
+                    "senators": [
+                    {
+                        "name": "Sherrod Brown",
+                        "party": "Democratic",
+                        "age": 71,
+                        "inauguration": "January 3, 2007"
+                    },
+                    {
+                        "name": "J.D. Vance",
+                        "party": "Republican",
+                        "age": 39,
+                        "inauguration": "January 3, 2023"
+                    }
+                    ]
+                },
+                "Oklahoma": {
+                    "name": "Kevin Stitt",
+                    "party": "Republican",
+                    "age": 49,
+                    "inauguration": "January 14, 2019",
+                    "senators": [
+                    {
+                        "name": "Markwayne Mullin",
+                        "party": "Republican",
+                        "age": 46,
+                        "inauguration": "January 3, 2023"
+                    },
+                    {
+                        "name": "James Lankford",
+                        "party": "Republican",
+                        "age": 55,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "Oregon": {
+                    "name": "Kate Brown",
+                    "party": "Democratic",
+                    "age": 61,
+                    "inauguration": "February 18, 2015",
+                    "senators": [
+                    {
+                        "name": "Ron Wyden",
+                        "party": "Democratic",
+                        "age": 74,
+                        "inauguration": "February 5, 1996"
+                    },
+                    {
+                        "name": "Jeff Merkley",
+                        "party": "Democratic",
+                        "age": 67,
+                        "inauguration": "January 3, 2009"
+                    }
+                    ]
+                },
+                "Pennsylvania": {
+                    "name": "Tom Wolf",
+                    "party": "Democratic",
+                    "age": 73,
+                    "inauguration": "January 20, 2015",
+                    "senators": [
+                    {
+                        "name": "Bob Casey Jr.",
+                        "party": "Democratic",
+                        "age": 63,
+                        "inauguration": "January 3, 2007"
+                    },
+                    {
+                        "name": "John Fetterman",
+                        "party": "Democratic",
+                        "age": 54,
+                        "inauguration": "January 3, 2023"
+                    }
+                    ]
+                },
+                "Rhode Island": {
+                    "name": "Dan McKee",
+                    "party": "Democratic",
+                    "age": 70,
+                    "inauguration": "March 2, 2021",
+                    "senators": [
+                    {
+                        "name": "Jack Reed",
+                        "party": "Democratic",
+                        "age": 74,
+                        "inauguration": "January 3, 1997"
+                    },
+                    {
+                        "name": "Sheldon Whitehouse",
+                        "party": "Democratic",
+                        "age": 68,
+                        "inauguration": "January 3, 2007"
+                    }
+                    ]
+                },
+                "South Carolina": {
+                    "name": "Henry McMaster",
+                    "party": "Republican",
+                    "age": 75,
+                    "inauguration": "January 24, 2017",
+                    "senators": [
+                    {
+                        "name": "Lindsey Graham",
+                        "party": "Republican",
+                        "age": 68,
+                        "inauguration": "January 3, 2003"
+                    },
+                    {
+                        "name": "Tim Scott",
+                        "party": "Republican",
+                        "age": 58,
+                        "inauguration": "January 3, 2013"
+                    }
+                    ]
+                },
+                "South Dakota": {
+                    "name": "Kristi Noem",
+                    "party": "Republican",
+                    "age": 49,
+                    "inauguration": "January 5, 2019",
+                    "senators": [
+                    {
+                        "name": "John Thune",
+                        "party": "Republican",
+                        "age": 63,
+                        "inauguration": "January 3, 2005"
+                    },
+                    {
+                        "name": "Mike Rounds",
+                        "party": "Republican",
+                        "age": 69,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "Tennessee": {
+                    "name": "Bill Lee",
+                    "party": "Republican",
+                    "age": 63,
+                    "inauguration": "January 19, 2019",
+                    "senators": [
+                    {
+                        "name": "Marsha Blackburn",
+                        "party": "Republican",
+                        "age": 71,
+                        "inauguration": "January 3, 2019"
+                    },
+                    {
+                        "name": "Bill Hagerty",
+                        "party": "Republican",
+                        "age": 64,
+                        "inauguration": "January 3, 2021"
+                    }
+                    ]
+                },
+                "Texas": {
+                    "name": "Greg Abbott",
+                    "party": "Republican",
+                    "age": 64,
+                    "inauguration": "January 20, 2015",
+                    "senators": [
+                    {
+                        "name": "John Cornyn",
+                        "party": "Republican",
+                        "age": 72,
+                        "inauguration": "December 1, 2002"
+                    },
+                    {
+                        "name": "Ted Cruz",
+                        "party": "Republican",
+                        "age": 53,
+                        "inauguration": "January 3, 2013"
+                    }
+                    ]
+                },
+                "Utah": {
+                    "name": "Spencer Cox",
+                    "party": "Republican",
+                    "age": 46,
+                    "inauguration": "January 4, 2021",
+                    "senators": [
+                    {
+                        "name": "Mike Lee",
+                        "party": "Republican",
+                        "age": 52,
+                        "inauguration": "January 3, 2011"
+                    },
+                    {
+                        "name": "Mitt Romney",
+                        "party": "Republican",
+                        "age": 76,
+                        "inauguration": "January 3, 2019"
+                    }
+                    ]
+                },
+                "Vermont": {
+                    "name": "Phil Scott",
+                    "party": "Republican",
+                    "age": 63,
+                    "inauguration": "January 5, 2017",
+                    "senators": [
+                    {
+                        "name": "Peter Welch",
+                        "party": "Democratic",
+                        "age": 76,
+                        "inauguration": "January 3, 2023"
+                    },
+                    {
+                        "name": "Bernie Sanders",
+                        "party": "Independent",
+                        "age": 82,
+                        "inauguration": "January 3, 2007"
+                    }
+                    ]
+                },
+                "Virginia": {
+                    "name": "Glenn Youngkin",
+                    "party": "Republican",
+                    "age": 54,
+                    "inauguration": "January 15, 2022",
+                    "senators": [
+                    {
+                        "name": "Mark Warner",
+                        "party": "Democratic",
+                        "age": 69,
+                        "inauguration": "January 3, 2009"
+                    },
+                    {
+                        "name": "Tim Kaine",
+                        "party": "Democratic",
+                        "age": 65,
+                        "inauguration": "January 3, 2013"
+                    }
+                    ]
+                },
+                "Washington": {
+                    "name": "Jay Inslee",
+                    "party": "Democratic",
+                    "age": 71,
+                    "inauguration": "January 16, 2013",
+                    "senators": [
+                    {
+                        "name": "Patty Murray",
+                        "party": "Democratic",
+                        "age": 73,
+                        "inauguration": "January 3, 1993"
+                    },
+                    {
+                        "name": "Maria Cantwell",
+                        "party": "Democratic",
+                        "age": 65,
+                        "inauguration": "January 3, 2001"
+                    }
+                    ]
+                },
+                "West Virginia": {
+                    "name": "Jim Justice",
+                    "party": "Republican",
+                    "age": 71,
+                    "inauguration": "January 16, 2017",
+                    "senators": [
+                    {
+                        "name": "Joe Manchin",
+                        "party": "Democratic",
+                        "age": 76,
+                        "inauguration": "November 15, 2010"
+                    },
+                    {
+                        "name": "Shelley Moore Capito",
+                        "party": "Republican",
+                        "age": 70,
+                        "inauguration": "January 3, 2015"
+                    }
+                    ]
+                },
+                "Wisconsin": {
+                    "name": "Tony Evers",
+                    "party": "Democratic",
+                    "age": 70,
+                    "inauguration": "January 7, 2019",
+                    "senators": [
+                    {
+                        "name": "Ron Johnson",
+                        "party": "Republican",
+                        "age": 68,
+                        "inauguration": "January 3, 2011"
+                    },
+                    {
+                        "name": "Tammy Baldwin",
+                        "party": "Democratic",
+                        "age": 61,
+                        "inauguration": "January 3, 2013"
+                    }
+                    ]
+                },
+                "Wyoming": {
+                    "name": "Mark Gordon",
+                    "party": "Republican",
+                    "age": 64,
+                    "inauguration": "January 7, 2019",
+                    "senators": [
+                    {
+                        "name": "John Barrasso",
+                        "party": "Republican",
+                        "age": 71,
+                        "inauguration": "June 25, 2007"
+                    },
+                    {
+                        "name": "Cynthia Lummis",
+                        "party": "Republican",
+                        "age": 69,
+                        "inauguration": "January 3, 2021"
+                    }
+                    ]
+                }
+            };
+            
+            var governor = governors[selectedState];
+            
+            var governorPartyColor = "gray";
+            if (governor.party == "Democratic") {
+                governorPartyColor = "#0471A6";
+            }
+            else if (governor.party == "Republican") {
+                governorPartyColor = "#6C1922";
+            }
+            
+            var governorInfo = "<div class='governor-box'><p>Governors</p>";
+            governorInfo += "<div class='governor-box' style='background-color: " + governorPartyColor + "'>";
+            governorInfo += "<p>" + governor.name + "</p>";
+            governorInfo += "<p>Political Party: " + governor.party + "</p>";
+            governorInfo += "<p>Age: " + governor.age + "</p>";
+            governorInfo += "<p>Inauguration Date: " + governor.inauguration + "</p>";
+            governorInfo += "</div></div>";
+            
+            var senatorsInfo = "<div class='senators-container'>";
+            senatorsInfo += "<p>Senators</p><div class='senators-box'>";
+            governor.senators.forEach(function (senator) {
+            var senatorPartyColor = "gray";
+            if (senator.party == "Democratic") {
+                senatorPartyColor = "#0471A6";
+            }
+            else if (senator.party == "Republican") {
+                senatorPartyColor = "#6C1922";
+            }
+            senatorsInfo += "<div class='senator-box' style='background-color: " + senatorPartyColor + "'>";
+                senatorsInfo += "<p>" + senator.name + "</p>";
+                senatorsInfo += "<p>Party: " + senator.party + "</p>";
+                senatorsInfo += "<p>Age: " + senator.age + "</p>";
+                senatorsInfo += "<p>Inauguration Date: " + senator.inauguration + "</p>";
+                senatorsInfo += "</div>";
+            });
+            senatorsInfo += "</div></div>";
+            
+            document.getElementById("governor-info").innerHTML = governorInfo + senatorsInfo;
+        }
+    </script>
+</body>
+</html>

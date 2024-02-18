@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body class="quiztemp">
+  <a href="index.html"><div class="title"> 
+    <h1 class="bungee-shade-regular poli">Poli</h1>
+    <h1 class="bungee-shade-regular pact">Pact</h1>
+  </div></a>
+  <h2>Find Your Match</h2>
+  <p class="quiz-subtitle">Pick the choice that best represents your political views.</p>
+  <form id="quizForm" method="post" action="results.html">
+    
+    <fieldset>
+      <div class="question-container">
+        <label for="q1"><strong>Political Party</strong></label>
+        <div class="options-container">
+          <div class="radio-container">
+            <input type="radio" id="q1-option1" name="q1-options" value="option1" required>
+            <label class="radio-label" for="q1-option1">Democrat</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q1-option2" name="q1-options" value="option2">
+            <label class="radio-label" for="q1-option2">Independent</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q1-option3" name="q1-options" value="option3">
+            <label class="radio-label" for="q1-option3">Republican</label>
+          </div>
+        </div>
+        
+      <div class="question-container">
+          <label for="q2"><strong>Gun Control</strong></label>
+          <div class="options-container">
+            <div class="radio-container">
+              <input type="radio" id="q2-option1" name="q2-options" value="option1" required>
+              <label class="radio-label" for="q2-option1">Increase regulation/ban guns</label>
+            </div>
+
+            <div class="radio-container">
+              <input type="radio" id="q2-option2" name="q2-options" value="option2">
+              <label class="radio-label" for="q2-option2">Support 2nd Amendment right</label>
+            </div>
+          </div>
+      </div>
+      
+      <div class="question-container">
+        <label for="q3"><strong>Economy</strong></label>
+        <div class="options-container">
+          <div class="radio-container3">
+            <input type="radio" id="q3-option1" name="q3-options" value="option1" required>
+            <label class="radio-label" for="q3-option1">Increase taxes for the rich (bottom-up economics)</label>
+          </div>
+          
+          <div class="radio-container3">
+            <input type="radio" id="q3-option2" name="q3-options" value="option2">
+            <label class="radio-label" for="q3-option2">Somewhere in the middle</label>
+          </div>
+          
+          <div class="radio-container3">
+            <input type="radio" id="q3-option3" name="q3-options" value="option3">
+            <label class="radio-label" for="q3-option3">Lower taxes (less government intervention)</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <label for="q4"><strong>Reproductive Rights</strong></label>
+        <div class="options-container">
+          <div class="radio-container">
+            <input type="radio" id="q4-option1" name="q4-options" value="option1" required>
+            <label class="radio-label" for="q4-option1">Pro-choice</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q4-option2" name="q4-options" value="option2">
+            <label class="radio-label" for="q4-option2">Requires significant limitations</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q4-option3" name="q4-options" value="option3">
+            <label class="radio-label" for="q4-option3">Pro-life</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <label for="q5"><strong>Climate Change</strong></label>
+        <div class="options-container">
+          <div class="radio-container">
+            <input type="radio" id="q5-option1" name="q5-options" value="option1" required>
+            <label class="radio-label" for="q5-option1">Very important</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q5-option2" name="q5-options" value="option2">
+            <label class="radio-label" for="q5-option2">Changes needed, but not a priority</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q5-option3" name="q5-options" value="option3">
+            <label class="radio-label" for="q5-option3">Not an issue</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <label for="q6"><strong>Immigration</strong></label>
+        <div class="options-container">
+          <div class="radio-container">
+            <input type="radio" id="q6-option1" name="q6-options" value="option1" required>
+            <label class="radio-label" for="q6-option1">More open immigration</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q6-option2" name="q6-options" value="option2">
+            <label class="radio-label" for="q6-option2">Reforming immigration to be safer</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q6-option3" name="q6-options" value="option3">
+            <label class="radio-label" for="q6-option3">Close borders/decrease immigration</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <label for="q7"><strong>Healthcare</strong></label>
+        <div class="options-container">
+          <div class="radio-container">
+            <input type="radio" id="q7-option1" name="q7-options" value="option1" required>
+            <label class="radio-label" for="q7-option1">Universal Healthcare (ACA)</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q7-option2" name="q7-options" value="option2">
+            <label class="radio-label" for="q7-option2">Healthcare should remain individual</label>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <label for="q8"><strong>Foreign Policy</strong></label>
+        <div class="options-container">
+          <div class="radio-container">
+            <input type="radio" id="q8-option1" name="q8-options" value="option1" required>
+            <label class="radio-label" for="q8-option1">Increase international aid and intervention</label>
+          </div>
+          
+          <div class="radio-container">
+            <input type="radio" id="q8-option2" name="q8-options" value="option2">
+            <label class="radio-label" for="q8-option2">Decrease monetary and military support</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <label for="q9"><strong>Stance on China</strong></label>
+        <div class="options-container">
+          <div class="radio-container">
+            <input type="radio" id="q9-option1" name="q9-options" value="option1" required>
+            <label class="radio-label" for="q9-option1">Hard on China (anti-trade)</label>
+          </div>
+
+          <div class="radio-container">
+            <input type="radio" id="q9-option2" name="q9-options" value="option2">
+            <label class="radio-label" for="q9-option2">Soft on China (valuable ally)</label>
+          </div>
+        </div>
+      </div>
+      
+    </fieldset>
+    
+    <div class="to-results-container">
+      <a href="results.html"<button type="submit" class="to-results">Submit</button></a>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
